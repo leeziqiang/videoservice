@@ -67,7 +67,7 @@ public class WebSocketServer {
             addOnlineCount();
             //在线数加1
         }
-        log.info("用户连接:" + userId + ",当前在线人数为:" + getOnlineCount());
+        log.info("新用户连接:" + userId + ",当前在线人数为:" + getOnlineCount());
         HashMap<String, String> data = new HashMap<>();
         data.put("userId", userId);
         sendMessageByStr(JSON.toJSONString(AjaxResult.success("连接成功", data)));
